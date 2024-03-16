@@ -94,10 +94,10 @@
                                 Purchase Amount: @string.Format("{0:c}", Model.CartHeader.PurchaseAmount)
                                 <br/>
                             </span>
-                            @if(Model.CartHeader.DiscountAmount > 0)
+                            @if(Model.CartHeader.DiscountTotal > 0)
                             {
                                 <span class="text-success">
-                                    Discount Amount: @string.Format("{0:c}", Model.CartHeader.DiscountAmount)
+                                    Discount Amount: @string.Format("{0:c}", Model.CartHeader.DiscountTotal)
                                     <br/>
                                 </span>
                             }
