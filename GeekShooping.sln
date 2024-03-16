@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.ProductAPI", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.IdentityServer", "GeekShopping.IdentityServer\GeekShopping.IdentityServer.csproj", "{59F64765-2AFF-49BE-80E9-3DFF41F85D22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.CartAPI", "GeekShopping.CartAPI\GeekShopping.CartAPI.csproj", "{75B199E6-19D1-4882-909F-D4FAD3AA7A68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.CartAPI", "GeekShopping.CartAPI\GeekShopping.CartAPI.csproj", "{75B199E6-19D1-4882-909F-D4FAD3AA7A68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.CouponAPI", "GeekShopping.CouponAPI\GeekShopping.CouponAPI.csproj", "{DAF78410-ABAF-42FB-921F-A7180138F689}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{75B199E6-19D1-4882-909F-D4FAD3AA7A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75B199E6-19D1-4882-909F-D4FAD3AA7A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75B199E6-19D1-4882-909F-D4FAD3AA7A68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF78410-ABAF-42FB-921F-A7180138F689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAF78410-ABAF-42FB-921F-A7180138F689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF78410-ABAF-42FB-921F-A7180138F689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAF78410-ABAF-42FB-921F-A7180138F689}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{85D4039E-9A6D-4472-91FD-60E05EEE3587} = {BE8F341D-1378-4B40-88F9-6901B74F17C3}
 		{59F64765-2AFF-49BE-80E9-3DFF41F85D22} = {BE8F341D-1378-4B40-88F9-6901B74F17C3}
 		{75B199E6-19D1-4882-909F-D4FAD3AA7A68} = {BE8F341D-1378-4B40-88F9-6901B74F17C3}
+		{DAF78410-ABAF-42FB-921F-A7180138F689} = {BE8F341D-1378-4B40-88F9-6901B74F17C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44782F14-DB85-4BF3-BFEA-254F451A02FA}
