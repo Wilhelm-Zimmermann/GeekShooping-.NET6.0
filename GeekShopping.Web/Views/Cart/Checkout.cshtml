@@ -6,7 +6,7 @@
         <input asp-for="CartHeader.UserId" hidden />
         <input asp-for="CartHeader.Id" hidden />
         <input asp-for="CartHeader.CouponCode" hidden />
-        <input asp-for="CartHeader.DiscountAmount" hidden />
+        <input asp-for="CartHeader.DiscountTotal" hidden />
         <input asp-for="CartHeader.PurchaseAmount" hidden />
         <div>
             <span style="font-size:25px;" class="text-warning">Enter details and place order:</span>
@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-12">
                             <label class="col-form-label">Phone Number:</label>
-                            <input asp-for="CartHeader.Phone" class="form-control"/>
+                            <input asp-for="CartHeader.PhoneNumber" class="form-control"/>
                         </div>
                         <div class="col-12">
                             <label class="col-form-label">Card Number:</label>
@@ -42,7 +42,7 @@
                         </div>
                         <div class="col-12 pb-4">
                             <label class="col-form-label">Expiry:</label>
-                            <input asp-for="CartHeader.ExpiryMothYear" placeholder="MMYY" class="form-control"/>
+                            <input asp-for="CartHeader.ExpiryMonthYear" placeholder="MMYY" class="form-control"/>
                         </div>
                     </div>
                 </div>
@@ -86,10 +86,10 @@
                             <div class="row">
                                 <div class="col-12 text-right pr-4 text-danger">
                                 Purchase Amount: @string.Format("{0:c}", Model.CartHeader.PurchaseAmount)<br/>
-                                @if(Model.CartHeader.DiscountAmount > 0)
+                                @if(Model.CartHeader.DiscountTotal> 0)
                                 {
                                     <span class="text-success">
-                                        Discount Amount: @string.Format("{0:c}", Model.CartHeader.DiscountAmount)
+                                        Discount Amount: @string.Format("{0:c}", Model.CartHeader.DiscountTotal)
                                     </span>
                                 }
                                 </div>
