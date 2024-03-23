@@ -1,5 +1,10 @@
 ﻿@model GeekShopping.Web.Models.CartViewModel
 
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-warning" role="alert">@TempData["Error"]</div>
+}
+
 @if (Model != null && Model.CartDetails.Count() > 0)
 {
     <form method="post">
@@ -86,10 +91,10 @@
                             <div class="row">
                                 <div class="col-12 text-right pr-4 text-danger">
                                 Purchase Amount: @string.Format("{0:c}", Model.CartHeader.PurchaseAmount)<br/>
-                                @if(Model.CartHeader.DiscountTotal> 0)
+                                    @if (Model.CartHeader.DiscountTotal > 0)
                                 {
                                     <span class="text-success">
-                                        Discount Amount: @string.Format("{0:c}", Model.CartHeader.DiscountTotal)
+                                            Discount Amount: @string.Format("{0:c}", Model.CartHeader.DiscountTotal)
                                     </span>
                                 }
                                 </div>
