@@ -80,7 +80,7 @@ namespace GeekShopping.CartAPI.Controllers
             if (cart == null) return NotFound();
             if (!string.IsNullOrEmpty(vo.CouponCode))
             {
-                CouponVO coupon = await _couponRepository.GetCouponByCouponCode(vo.CouponCode, token);
+                CouponVO coupon = await _couponRepository.GetCouponByCouponCode(vo.CouponCode, token.Split("Bearer ")[1]);
                 if(vo.DiscountTotal != coupon.DiscountAmount)
                 {
                     return StatusCode(412);

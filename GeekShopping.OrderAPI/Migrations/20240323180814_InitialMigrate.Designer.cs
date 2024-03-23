@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeekShopping.OrderAPI.Migrations
 {
     [DbContext(typeof(MySQLContext))]
-    [Migration("20240317210913_InitialMigrate")]
+    [Migration("20240323180814_InitialMigrate")]
     partial class InitialMigrate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -113,6 +113,10 @@ namespace GeekShopping.OrderAPI.Migrations
                         .HasColumnType("datetime(6)")
                         .HasColumnName("purchase_time");
 
+                    b.Property<bool>("PaymentStatus")
+                        .HasColumnType("tinyint(1)")
+                        .HasColumnName("payment_status");
+
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasColumnType("longtext")
@@ -135,7 +139,7 @@ namespace GeekShopping.OrderAPI.Migrations
             modelBuilder.Entity("GeekShopping.OrderAPI.Model.OrderDetail", b =>
                 {
                     b.HasOne("GeekShopping.OrderAPI.Model.OrderHeader", "OrderHeader")
-                        .WithMany("CartDetails")
+                        .WithMany("OrderDetails")
                         .HasForeignKey("OrderHeaderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -145,7 +149,7 @@ namespace GeekShopping.OrderAPI.Migrations
 
             modelBuilder.Entity("GeekShopping.OrderAPI.Model.OrderHeader", b =>
                 {
-                    b.Navigation("CartDetails");
+                    b.Navigation("OrderDetails");
                 });
 #pragma warning restore 612, 618
         }

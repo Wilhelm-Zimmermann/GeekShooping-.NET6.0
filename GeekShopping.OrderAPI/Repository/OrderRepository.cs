@@ -16,6 +16,10 @@ namespace GeekShopping.OrderAPI.Repository
 
         public async Task<bool> AddOrder(OrderHeader header)
         {
+            if(header.CouponCode == null)
+            {
+                header.CouponCode = "";
+            }
             if (header == null) { return false; }
             await using var _db = new MySQLContext(_context);
             _db.Headers.Add(header);
